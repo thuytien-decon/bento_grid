@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --purple-1: hsl(254, 88%, 90%);
+    --purple-2: hsl(256, 67%, 59%);
+    --yellow-1: hsl(31, 67%, 93%);
+    --yellow-2: hsl(39, 100%, 71%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background: #fafdff;
+    font-family: sans-serif;
+    margin: 50px 50px;
+    max-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.large-text {
+    font-size: 4rem;
+}
+
+.medium-text {
+    font-size: 2rem;
+}
+
+.small-text {
+    font-size: 1rem;
+}
+
+.bento-grid {
+    background-color: darkblue;
+    display: grid;
+    gap:1rem;
+    grid-template-areas:
+        'a1 a2 a2 a3'
+        'a1 a2 a2 a3'
+        'a1 a2 a2 a3'
+        'a1 a2 a2 a3'
+        'a1 a5 a6 a3'
+        'a4 a5 a6 a3'
+        'a4 a5 a6 a3'
+        'a4 a7 a8 a8'
+        'a4 a7 a8 a8'
+        'a4 a7 a8 a8'
+    ;
+
+}
+
+.bento-grid .item {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.bento-grid .item:nth-child(1) {
+    background-color: var(--yellow-1);
+}
+
+
+.bento-grid .item:nth-child(2),
+.bento-grid .item:nth-child(8) {
+    background-color: var(--purple-1);
+    color: #fafdff;
+}
+
+.bento-grid .item:nth-child(3) {
+    background-color: var(--purple-2);
+}
+
+.bento-grid .item:nth-child(4),
+.bento-grid .item:nth-child(6) {
+    background-color: var(--purple-2);
+}
+
+.bento-grid .item:nth-child(5),
+.bento-grid .item:nth-child(7) {
+    background-color: var(--white);
+}
+
+.bento-grid .item:nth-child(1) {
+    grid-area: a1;
+    padding: 4rem 2rem 0 2.5rem
+}
+.bento-grid .item:nth-child(1) em {
+    color: var(--purple-2);
+}
+.bento-grid .item:nth-child(1) img {
+    margin-top:  1rem;
+}
+.bento-grid .item:nth-child(2) {
+    grid-area: a2;
+    text-align: center;
+    padding: 1.5rem;
+
+}
+.bento-grid .item:nth-child(3) {
+    grid-area: a3;
+}
+.bento-grid .item:nth-child(4) {
+    grid-area: a4;
+}
+.bento-grid .item:nth-child(5) {
+    grid-area: a5;
+}
+.bento-grid .item:nth-child(6) {
+    grid-area: a6;
+}
+.bento-grid .item:nth-child(7) {
+    grid-area: a7;
+}
+.bento-grid .item:nth-child(8) {
+    grid-area: a8;
+}
