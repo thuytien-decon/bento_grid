@@ -43,9 +43,8 @@ body {
 }
 
 .bento-grid {
-    background-color: darkblue;
     display: grid;
-    gap:1rem;
+    gap: 1.5rem;
     grid-template-areas:
         'a1 a2 a2 a3'
         'a1 a2 a2 a3'
@@ -74,17 +73,17 @@ body {
 
 .bento-grid .item:nth-child(2),
 .bento-grid .item:nth-child(8) {
-    background-color: var(--purple-1);
+    background-color: var(--purple-2);
     color: #fafdff;
 }
 
 .bento-grid .item:nth-child(3) {
-    background-color: var(--purple-2);
+    background-color: var(--purple-1);
 }
 
 .bento-grid .item:nth-child(4),
 .bento-grid .item:nth-child(6) {
-    background-color: var(--purple-2);
+    background-color: var(--yellow-2);
 }
 
 .bento-grid .item:nth-child(5),
@@ -94,35 +93,117 @@ body {
 
 .bento-grid .item:nth-child(1) {
     grid-area: a1;
-    padding: 4rem 2rem 0 2.5rem
+    padding: 4rem 2rem 0 2.5rem;
+    font-weight: 500;
 }
+
 .bento-grid .item:nth-child(1) em {
     color: var(--purple-2);
 }
+
 .bento-grid .item:nth-child(1) img {
-    margin-top:  1rem;
+    margin-top: 1rem;
 }
+
 .bento-grid .item:nth-child(2) {
     grid-area: a2;
     text-align: center;
     padding: 1.5rem;
 
 }
+
+.bento-grid .item:nth-child(2) span {
+    color: var(--yellow-2);
+
+}
+
 .bento-grid .item:nth-child(3) {
     grid-area: a3;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    font-weight: 500;
+    position: relative;
+}
+
+
+.bento-grid .item:nth-child(3) img {
+    position: absolute;
+    height: 80%;
+    object-fit: contain;
+    align-items: flex-start;
+    margin-left: 1.5rem;
+
+}
+.bento-grid .item:nth-child(3) .small-text{
+   align-self: flex-end;
 }
 .bento-grid .item:nth-child(4) {
     grid-area: a4;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 500;
 }
+
+
 .bento-grid .item:nth-child(5) {
     grid-area: a5;
+    padding: 1.5rem;
+    position: relative;
+    /* flex-direction: column;
+    justify-content: space-between; */
+    font-weight: 500;
+    overflow: hidden;
+
 }
+
+.bento-grid .item:nth-child(5) img {
+    position: absolute;
+}
+
+.bento-grid .item:nth-child(5) p {
+    margin-top: 6rem;
+
+}
+
 .bento-grid .item:nth-child(6) {
     grid-area: a6;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    position: relative;
+    overflow: hidden;
 }
+
+.bento-grid .item:nth-child(6) p {
+    font-weight: 500;
+}
+
+.bento-grid .item:nth-child(6) img {
+    margin-top: 1rem;
+    position: relative;
+
+}
+
 .bento-grid .item:nth-child(7) {
     grid-area: a7;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+
 .bento-grid .item:nth-child(8) {
     grid-area: a8;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+}
+
+.bento-grid .item:nth-child(8) p {
+    width: fit-content;
+    align-self: center;
+    margin-left: 2.5rem;
+    font-weight: 500;
 }
